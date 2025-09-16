@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Developer's Portfolio</title>
+	<meta name="description" content="Personal web portfolio of Your Name: projects, skills, and contact." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						brand: { DEFAULT: '#FFB343', dark: '#DB9A39' },
+						accent: '#DB9A39',
+						surface: '#B37E2E',
+						header: '#614419',
+						base: '#FFF8EE'
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		html { scroll-behavior: smooth; }
+		body { font-family: 'Inter', system-ui,Roboto, Helvetica, "Apple Color Emoji", "Montserrat", sans-serif }
+		section { scroll-margin-top: 96px; }
+	</style>
+</head>
+<body class="bg-base text-gray-800 selection:bg-brand/20 selection:text-[#5c3c12]">
+	<header class="fixed top-0 inset-x-0 z-50 bg-header/95 backdrop-blur border-b border-transparent text-white">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="flex items-center justify-between h-16">
+				<a href="#home" class="flex items-center gap-2 shrink-0">
+					<img src="./img/logo.jpeg" alt="Christian Martin logo" class="h-9 w-9 rounded-md object-cover ring-1 ring-white/20" />
+					<span class="font-semibold">Christian Martin</span>
+				</a>
+				<nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+					<a href="#home" class="nav-link text-sm font-medium text-white/80 hover:text-white">Home</a>
+					<a href="#about" class="nav-link text-sm font-medium text-white/80 hover:text-white">About</a>
+					<a href="#projects" class="nav-link text-sm font-medium text-white/80 hover:text-white">Project</a>
+					<a href="#contact" class="nav-link text-sm font-medium text-white/80 hover:text-white">Contact</a>
+				</nav>
+				<button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-white/20 text-white hover:bg-white/10" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+				</button>
+			</div>
+		</div>
+		<nav id="mobile-menu" class="md:hidden hidden border-t border-white/10 bg-header" aria-label="Mobile">
+			<ul class="max-w-6xl mx-auto px-4 py-3 space-y-2">
+				<li><a href="#home" class="mobile-link block px-3 py-2 rounded-md text-white hover:bg-white/10">Home</a></li>
+				<li><a href="#about" class="mobile-link block px-3 py-2 rounded-md text-white hover:bg-white/10">About</a></li>
+				<li><a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-white hover:bg-white/10">Project</a></li>
+				<li><a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-white hover:bg-white/10">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="home" class="pt-24">
+		<section class="relative">
+			<div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand/20 to-transparent"></div>
+			<div class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+				<div class="grid md:grid-cols-2 items-center gap-10">
+					<div>
+						<p class="text-brand font-semibold mb-2 hover:text-brand-dark transition duration-300">Hello, I'm</p>
+						<h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#4a3312]">Christian Martin</h1>
+						<p class="mt-4 text-[#5b4524] leading-relaxed font-bold" style="font-family: 'Inter', sans-serif;">the Cutie Web Developer</p>
+						<div class="mt-6 flex flex-wrap gap-3">
+							<a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand text-[#3d2a0f] hover:bg-brand-dark hover:text-white transition">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+								<span>View Projects</span>
+							</a>
+							<a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-[#DB9A39] text-[#614419] hover:bg-[#FFB343]/20">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+								<span>Contact Me</span>
+							</a>
+						</div>
+					</div>
+					<div class="relative">
+						<div class="aspect-square w-full max-w-sm mx-auto rounded-2xl bg-gradient-to-br from-brand/30 via-surface to-brand/10 p-1">
+							<div class="h-full w-full rounded-2xl bg-surface border border-[#DB9A39] flex items-center justify-center text-[#614419]/70">
+								<img src="./img/logo.jpeg" alt="Logo" class="h-full w-full rounded-2xl object-cover" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="max-w-6xl mx-auto px-4 py-16 md:py-24 bg-surface/60 rounded-2xl">
+			<div class="grid md:grid-cols-2 gap-10 items-start">
+				<div>
+					<h2 class="text-2xl md:text-3xl font-bold text-[#3d2a0f]">About me</h2>
+					<p class="mt-4 text-[#4a3a20] leading-relaxed">I am an IT student passionate about web development, software solutions, and exploring new technologies. Throughout my academic journey, I have gained skills in HTML, CSS, Javascript, and database management, which i apply in building creative and user-friendly projects. My goal is to grow as a developer and contribute to innovative solutions in the IT industry.</p>
+					<ul class="mt-6 grid grid-cols-2 gap-3 text-sm text-[#3d2a0f]">
+						<li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span> Responsive Design</li>
+						<li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span> Accessibility</li>
+						<li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span> Performance</li>
+						<li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand"></span> Clean Code</li>
+					</ul>
+				</div>
+				<div class="rounded-2xl border border-[#DB9A39] p-6 bg-surface/70">
+					<h3 class="font-semibold text-[#3d2a0f]">Skills</h3>
+					<div class="mt-4 flex flex-wrap gap-2">
+						<span class="px-3 py-1 rounded-full text-xs bg-brand/25 text-[#3d2a0f]">HTML</span>
+						<span class="px-3 py-1 rounded-full text-xs bg-brand/25 text-[#3d2a0f]">CSS</span>
+						<span class="px-3 py-1 rounded-full text-xs bg-brand/25 text-[#3d2a0f]">JavaScript</span>
+						<span class="px-3 py-1 rounded-full text-xs bg-brand/25 text-[#3d2a0f]">Tailwind</span>
+						<span class="px-3 py-1 rounded-full text-xs bg-brand/25 text-[#3d2a0f]">React</span>
+						<span class="px-3 py-1 rounded-full text-xs bg-brand/25 text-[#3d2a0f]">Node</span>
+						<span class="px-3 py-1 rounded-full text-xs bg-brand/25 text-[#3d2a0f]">PHP</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects" class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+			<div class="flex items-end justify-between gap-6 mb-8">
+				<h2 class="text-2xl md:text-3xl font-bold text-[#3d2a0f]">My projects</h2>
+				<a href="#contact" class="hidden md:inline-flex items-center gap-2 text-sm text-brand hover:text-[#614419]">Work with me
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+				</a>
+			</div>
+			<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<article class="group rounded-2xl border border-[#DB9A39] overflow-hidden bg-surface/70 hover:shadow-sm transition">
+					<img src="./img/Project1.png" alt="E-Book preview" class="h-40 w-full object-cover" />
+					<div class="p-5">
+						<h3 class="font-semibold text-[#3d2a0f]">E-Book</h3>
+						<p class="mt-2 text-sm text-[#4a3a20]">A digital platform for reading and managing e-books, designed with a clean interface and responsive layout for easy access on any device.</p>
+						<div class="mt-4 flex items-center justify-between">
+							<a href="./projects/ebook.html" class="inline-flex items-center gap-1 text-sm text-brand hover:text-[#614419]">Learn More
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+							</a>
+							<!-- <a href="#" class="text-sm text-gray-600 hover:text-gray-800">Code</a> -->
+						</div>
+					</div>
+				</article>
+				<article class="group rounded-2xl border border-[#DB9A39] overflow-hidden bg-surface/70 hover:shadow-sm transition">
+					<img src="./img/Project2.png" alt="Job Work System preview" class="h-40 w-full object-cover" />
+					<div class="p-5">
+						<h3 class="font-semibold text-[#3d2a0f]">Job Work System</h3>
+						<p class="mt-2 text-sm text-[#4a3a20]">A workflow management system that organizes tasks, tracks progress, and work process to improve productivity and efficiency.</p>
+						<div class="mt-4 flex items-center justify-between">
+							<a href="./projects/jobwork.html" class="inline-flex items-center gap-1 text-sm text-brand hover:text-[#614419]">Learn More
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+							</a>
+							<!-- <a href="#" class="text-sm text-gray-600 hover:text-gray-800">Code</a> -->
+						</div>
+					</div>
+				</article>
+				<article class="group rounded-2xl border border-[#DB9A39] overflow-hidden bg-surface/70 hover:shadow-sm transition">
+					<img src="./img/Project3.png" alt="Food Ordering preview" class="h-40 w-full object-cover" />
+					<div class="p-5">
+						<h3 class="font-semibold text-[#3d2a0f]">Food Ordering Website</h3>
+						<p class="mt-2 text-sm text-[#4a3a20]">A user-friendly website that allows customers to browse menus, place food orders, and manage deliveries online with a simple and efficient interface.</p>
+						<div class="mt-4 flex items-center justify-between">
+							<a href="./projects/food.html" class="inline-flex items-center gap-1 text-sm text-brand hover:text-[#614419]">Learn More
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+							</a>
+							<!-- <a href="#" class="text-sm text-gray-600 hover:text-gray-800">Code</a> -->
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section id="contact" class="max-w-6xl mx-auto px-4 py-16 md:py-24 bg-surface/60 rounded-2xl">
+			<h2 class="text-2xl md:text-3xl font-bold text-[#3d2a0f]">Contact</h2>
+			<p class="mt-3 text-[#4a3a20]">Have a project in mind or want to collaborate? Let's talk.</p>
+			<form id="contact-form" class="mt-8 grid gap-4 max-w-2xl" novalidate>
+				<div class="grid md:grid-cols-2 gap-4">
+					<label class="block">
+						<span class="text-sm text-[#3d2a0f]">Name</span>
+						<input type="text" name="name" required class="mt-1 block w-full rounded-md border-[#DB9A39] focus:border-brand focus:ring-brand bg-white/90" placeholder="Your name" />
+					</label>
+					<label class="block">
+						<span class="text-sm text-[#3d2a0f]">Email</span>
+						<input type="email" name="email" required class="mt-1 block w-full rounded-md border-[#DB9A39] focus:border-brand focus:ring-brand bg-white/90" placeholder="you@example.com" />
+					</label>
+				</div>
+				<label class="block">
+					<span class="text-sm text-[#3d2a0f]">Message</span>
+					<textarea name="message" rows="5" required class="mt-1 block w-full rounded-md border-[#DB9A39] focus:border-brand focus:ring-brand bg-white/90" placeholder="Tell me about your project..."></textarea>
+				</label>
+				<div class="flex items-center gap-3">
+					<button type="submit" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand text-[#3d2a0f] hover:bg-brand-dark hover:text-white">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+						<span>Send</span>
+					</button>
+					<p id="form-status" class="text-sm text-[#4a3a20]" role="status" aria-live="polite"></p>
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<footer class="border-t border-transparent bg-header text-white">
+		<div class="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
+			<p>© <span id="year"></span> christianmartin. All rights reserved.</p>
+			<div class="flex items-center gap-4">
+				<a href="https://github.com/radzdev1120" target="_blank" rel="noopener" class="hover:text-brand">GitHub</a>
+				<a href="https://www.linkedin.com/in/christian-martin-raden-360b962a0/" target="_blank" rel="noopener" class="hover:text-brand">LinkedIn</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div id="project-modal" class="fixed inset-0 z-[100] hidden">
+		<div class="absolute inset-0 bg-black/50"></div>
+		<div class="relative mx-auto my-10 w-[min(92vw,720px)] rounded-2xl bg-white shadow-lg">
+			<div class="flex items-center justify-between border-b border-slate-200 p-4">
+				<h3 id="modal-title" class="text-lg font-semibold text-[#3d2a0f]"></h3>
+				<button id="modal-close" class="h-9 w-9 inline-flex items-center justify-center rounded-md text-[#614419] hover:bg-[#FFB343]/20" aria-label="Close">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+				</button>
+			</div>
+			<div class="p-4">
+				<p id="modal-description" class="text-[#4a3a20]"></p>
+				<p class="mt-4 text-sm text-[#4a3a20]">Tools: <span id="modal-tools" class="font-medium text-[#3d2a0f]"></span></p>
+				<div class="mt-6 flex items-center gap-3">
+					<a id="modal-demo" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand text-[#3d2a0f] hover:bg-brand-dark hover:text-white">Visit Demo</a>
+					<button id="modal-ok" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-[#DB9A39] text-[#614419] hover:bg-[#FFB343]/20">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./script.js"></script>
+</body>
+</html>
