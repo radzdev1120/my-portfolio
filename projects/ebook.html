@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>E-Book | Project Details</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						brand: { DEFAULT: '#FFB343', dark: '#DB9A39' },
+						accent: '#DB9A39',
+						surface: '#B37E2E',
+						header: '#614419',
+						base: '#FFF8EE'
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		html { scroll-behavior: smooth; }
+		body { font-family: 'Inter', system-ui,Roboto, Helvetica, "Apple Color Emoji", "Montserrat", sans-serif }
+		section { scroll-margin-top: 96px; }
+	</style>
+</head>
+<body class="bg-base text-[#4a3a20]">
+	<header class="fixed top-0 inset-x-0 z-50 bg-header/95 backdrop-blur border-b border-transparent text-white">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="flex items-center justify-between h-16">
+				<a href="../index.html#home" class="flex items-center gap-2 shrink-0">
+					<img src="../img/logo.jpeg" alt="Logo" class="h-9 w-9 rounded-md object-cover ring-1 ring-white/20" />
+					<span class="font-semibold">Christian Martin</span>
+				</a>
+				<nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+					<a href="../index.html#projects" class="text-sm font-medium text-white/80 hover:text-white">Back to Projects</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<main class="pt-24">
+		<section class="max-w-6xl mx-auto px-4 py-12">
+			<h1 class="text-3xl md:text-4xl font-extrabold text-[#3d2a0f]">E-Book</h1>
+			<p class="mt-3 text-[#4a3a20] max-w-3xl">This project is a digital library platform where users can browse, read, and manage e-books online. It is designed with a responsive layout to ensure accessibility across different devices such as desktops, tablets, and smartphones. The website features categories for organizing books, a search function for easy navigation, and a clean interface for a comfortable reading experience. This project showcases my skills in front-end development, user interface design, and building content-driven applications.</p>
+			<div class="mt-8 grid md:grid-cols-2 gap-6">
+				<img src="../img/Project1.png" alt="E-Book preview" class="w-full rounded-xl border border-[#DB9A39] object-cover" />
+				<div class="rounded-xl border border-[#DB9A39] bg-surface/70 p-6">
+					<h2 class="text-xl font-semibold text-[#3d2a0f]">Overview</h2>
+					<p class="mt-2 text-[#4a3a20]">An online platform for browsing and reading e-books, designed with a responsive and clean interface for easy access on any device</p>
+					<h3 class="mt-6 text-sm font-semibold text-[#3d2a0f]">Tools Used</h3>
+					<ul class="mt-2 grid grid-cols-2 gap-2 text-sm text-[#3d2a0f]">
+						<li class="px-3 py-1 rounded-full bg-brand/25">HTML</li>
+						<li class="px-3 py-1 rounded-full bg-brand/25">Tailwind CSS</li>
+						<li class="px-3 py-1 rounded-full bg-brand/25">JavaScript</li>
+					</ul>
+					<div class="mt-6">
+						<a href="../index.html#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand text-[#3d2a0f] hover:bg-brand-dark hover:text-white">Back to Projects</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="border-t border-transparent bg-header text-white">
+		<div class="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
+			<p>© <span id="year"></span> christianmartin. All rights reserved.</p>
+			<div class="flex items-center gap-4">
+				<a href="../index.html#home" class="hover:text-brand">Home</a>
+				<a href="../index.html#contact" class="hover:text-brand">Contact</a>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		const yearEl = document.getElementById('year');
+		if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+	</script>
+</body>
+</html>
